@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Files</title>
+</head>
+<body  style="  background-color: rgb(96, 130, 178);" ;>
+    <h1 style="text-align: center;">Uploaded Files</h1>
+    <center>
+    <table border="1" style="width: 400px; height:400px;  background-color: rgb(229, 236, 236);" >
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Profile Picture</th>
+            <th>Uploaded Files</th>
+        </tr>
+        <% users.forEach(user => { %>
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td>
+                <img src="/<%= user.profilePic %>" alt="Profile Pic" width="100">
+            </td>
+            <td>
+                <ul>
+                <% user.uploadedFiles.forEach(file => { %>
+                    <li><a href="/download/<%= file %>"><%= file %></a></li>
+                <% }) %>
+                </ul>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</center>
+</body>
+</html>

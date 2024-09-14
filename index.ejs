@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        .form{
+           text-align: center;
+           margin-bottom: 50px;
+           margin-top: 180px;
+           width: 500px;
+           background-color: rgb(177, 199, 199);
+           margin-left: 685px;
+           
+        }
+    </style>
+</head>
+<body style="background-color: rgb(221, 157, 203);">
+    <div class="form">
+    <h1 style="text-align: center; ">User Registration</h1>
+    <form action="/register" method="POST" enctype="multipart/form-data"  >
+        <div>
+            <label>Name:</label>
+            <input type="text" name="name" required>
+        </div>
+        <br/>
+        <div>
+            <label>Email:</label>
+            <input type="email" name="email" required>
+        </div>  <br/>
+        <div>
+            <label>Profile Picture:</label>
+            <input type="file" name="profilePic" required>
+        </div>  <br/>
+        <div>
+            <label>Upload Additional Files (Images/PDFs):</label>
+            <br>
+            <input type="file" name="uploadedFiles" multiple>
+        </div>  <br/>
+        <button type="submit"  style="text-align : center; background-color:rgb(130, 130, 199) ">Register</button>
+    </form>
+</div>
+</body>
+</html>
